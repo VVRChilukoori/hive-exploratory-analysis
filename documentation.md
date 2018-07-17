@@ -117,3 +117,47 @@
 
 [comment]: <> (Image-6 here)
 
+<p>After executing the above code, it fetched 407 rows of data. It means there are 407 account holders in between age of 29-38years.</p>
+<p>select * from account_name</p>
+<p>where date_of_birth &gt;= 1990;</p>
+
+
+[comment]: <> (Image-7 here)
+
+<p>Transaction_details table:</p>
+<p>select distinct(transaction_currency)</p>
+<p>from transaction_details;</p>
+
+[comment]: <> (Image-8 here)
+
+<p>On running the above code, it can be seen that there are 4 different transaction currencies (&ldquo;CAD&rdquo;, &ldquo;USD&rdquo;, &ldquo;HKD&rdquo;, &ldquo;INR&rdquo;) in the transaction table. It means there are some foreign transactions.</p>
+<ul>
+<li>Code to get the details about the card transactions.</li>
+</ul>
+
+[comment]: <> (Image-9 here)
+
+<p>select * transaction_details</p>
+<p>where debit_or_credit = &ldquo;c&rdquo;;</p>
+<p>From the above table, it can be said that there1465 credit card transactions out of 3000 transactions.</p>
+<p><strong>What should be submitted:&nbsp;</strong></p>
+<p>A word document with all the queries used and the insights with explanation.&nbsp;</p>
+<p><strong>Sample Queries:&nbsp;</strong></p>
+<ol>
+<li><strong> How many foreign currency transactions were done?&nbsp;</strong></li>
+</ol>
+<p><strong>&nbsp; &nbsp; Join the account master table and transaction table if the account currency from account master table is not equal to transaction currency from transaction table.&nbsp;</strong></p>
+<p><strong>Ans:</strong> Code for the above requirement.</p>
+<p>--------------- join and creating tables -----------<br /> <br /> create table join_table AS<br /> select account_master.account_number, account_master.country_code,account_master.account_currency,transaction_details.transaction_currency from account_master join transaction_details on account_master.account_number =transaction_details.account_number;<br /> <br /> --------------- foreign currency ---------------<br /> <br /> select account_number,account_currency, transaction_currency from join_table<br /> where account_currency!= transaction_currency;</p>
+
+[comment]: <> (Image-10 here)
+
+[comment]: <> (Image-11 here)
+
+<p>For this one, I have joined the 2 tables with the account_number, country_code, account_currency and transaction_currency using account number as the common join. Later on, wrote a query to get the foreign transactions. And found that 2248 transactions out of total 3000 transactions were foreign transactions.</p>
+<ol start="2">
+<li><strong> How many accounts are there with each account status and what is the sum of ledger balance with respect to account status codes.</strong></li>
+</ol>
+<p><strong>Account status code&nbsp; &nbsp; &nbsp; - Allowable values 1/8/5&nbsp;</strong></p>
+<p>Code to get account status code of 1:</p>
+<p>select account_number<br /> from account_master<br /> where account_status_code = "1";</p>
