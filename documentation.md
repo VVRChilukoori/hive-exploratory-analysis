@@ -90,7 +90,8 @@
 <p>select * from account_master</p>
 <p>where country_code = &ldquo;USA&rdquo;;</p>
 
-[comment]: <> (Image-3 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/3.jpg" alt="" width="830" height="240" /></p>
 
 <p>It took 1.63 seconds to execute the above code and fetched 329 rows. It means there are 329 account holders in the country USA.</p>
 <ul>
