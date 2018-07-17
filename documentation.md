@@ -3,7 +3,8 @@
 
 <p><strong>Environment (Virtual machine setup) cloudera used for performing the below tasks:</strong></p>
 
-[comment]: <> (Image-1 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/1.jpg" alt="" width="776" height="489" /></p>
 
 <p>RAM used: 4096 MB.</p>
 
