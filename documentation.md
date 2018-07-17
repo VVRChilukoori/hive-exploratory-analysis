@@ -126,7 +126,7 @@
 <p>select * from account_name</p>
 <p>where date_of_birth &gt;= 1980 and date_of_birth &lt;1990;</p>
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="776" height="350" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/6.jpg" alt="" width="776" height="350" /></p>
 </ul>
 
 <p>After executing the above code, it fetched 407 rows of data. It means there are 407 account holders in between age of 29-38years.</p>
@@ -135,7 +135,7 @@
 
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="860" height="350" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/7.jpg" alt="" width="860" height="350" /></p>
 </ul>
 
 <p>Transaction_details table:</p>
@@ -143,7 +143,7 @@
 <p>from transaction_details;</p>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="776" height="270" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/8.jpg" alt="" width="776" height="270" /></p>
 </ul>
 
 <p>On running the above code, it can be seen that there are 4 different transaction currencies (&ldquo;CAD&rdquo;, &ldquo;USD&rdquo;, &ldquo;HKD&rdquo;, &ldquo;INR&rdquo;) in the transaction table. It means there are some foreign transactions.</p>
@@ -152,14 +152,13 @@
 </ul>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="830" height="400" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/9.jpg" alt="" width="830" height="400" /></p>
 </ul>
 
 <p>select * transaction_details</p>
 <p>where debit_or_credit = &ldquo;c&rdquo;;</p>
 <p>From the above table, it can be said that there1465 credit card transactions out of 3000 transactions.</p>
-<p><strong>What should be submitted:&nbsp;</strong></p>
-<p>A word document with all the queries used and the insights with explanation.&nbsp;</p>
+
 <p><strong>Sample Queries:&nbsp;</strong></p>
 <ol>
 <li><strong> How many foreign currency transactions were done?&nbsp;</strong></li>
@@ -168,7 +167,9 @@
 <p><strong>Ans:</strong> Code for the above requirement.</p>
 <p>--------------- join and creating tables -----------<br /> <br /> create table join_table AS<br /> select account_master.account_number, account_master.country_code,account_master.account_currency,transaction_details.transaction_currency from account_master join transaction_details on account_master.account_number =transaction_details.account_number;<br /> <br /> --------------- foreign currency ---------------<br /> <br /> select account_number,account_currency, transaction_currency from join_table<br /> where account_currency!= transaction_currency;</p>
 
-[comment]: <> (Image-10 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/10.jpg" alt="" width="830" height="400" /></p>
+</ul>
 
 [comment]: <> (Image-11 here)
 
