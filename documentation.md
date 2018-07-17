@@ -282,6 +282,5 @@
 <p>Validation: Performed the same calculations by loading the .csv files into Hive and obtained the same values (documented those values, codes and screenshots of them).</p>
 <p><strong>References:</strong></p>
 <ul>
-<li>I have attached the .csv files used for this assignment.</li>
-<li>Also attached the screenshots of the values obtained.</li>
+<li>Look for the <a href="https://github.com/VVRChilukoori/hive-exploratory-analysis/tree/branch/data-files">data files </a>used for this project</li>
 </ul>
