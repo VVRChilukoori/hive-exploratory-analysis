@@ -125,28 +125,35 @@
 </ul>
 <p>select * from account_name</p>
 <p>where date_of_birth &gt;= 1980 and date_of_birth &lt;1990;</p>
-
-[comment]: <> (Image-6 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="776" height="350" /></p>
+</ul>
 
 <p>After executing the above code, it fetched 407 rows of data. It means there are 407 account holders in between age of 29-38years.</p>
 <p>select * from account_name</p>
 <p>where date_of_birth &gt;= 1990;</p>
 
 
-[comment]: <> (Image-7 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="860" height="350" /></p>
+</ul>
 
 <p>Transaction_details table:</p>
 <p>select distinct(transaction_currency)</p>
 <p>from transaction_details;</p>
 
-[comment]: <> (Image-8 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="776" height="270" /></p>
+</ul>
 
 <p>On running the above code, it can be seen that there are 4 different transaction currencies (&ldquo;CAD&rdquo;, &ldquo;USD&rdquo;, &ldquo;HKD&rdquo;, &ldquo;INR&rdquo;) in the transaction table. It means there are some foreign transactions.</p>
 <ul>
 <li>Code to get the details about the card transactions.</li>
 </ul>
 
-[comment]: <> (Image-9 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="830" height="400" /></p>
+</ul>
 
 <p>select * transaction_details</p>
 <p>where debit_or_credit = &ldquo;c&rdquo;;</p>
