@@ -203,7 +203,9 @@
 <li>Code to get account status code of 8:</li>
 </ul>
 
-[comment]: <> (Image-14 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/14.jpg" alt="" width="540" height="270" /></p>
+</ul>
 
 <p>select account_number<br /> from account_master<br /> where account_status_code = "8";</p>
 <ul>
@@ -211,7 +213,9 @@
 </ul>
 <p>select account_status_code, sum(ledger_balance)&nbsp;<br /> from account_master<br /> group by account_status_code;</p>
 
-[comment]: <> (Image-15 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/15.jpg" alt="" width="600" height="250" /></p>
+</ul>
 
 <p>On running the above code</p>
 <p>Got the values as shown in the screenshot.</p>
@@ -270,7 +274,9 @@
 <p>Code used:</p>
 <p>create table joint_account_table AS<br /> <br /> select account_name.account_number, account_master.country_code from account_master join account_name on account_name.account_number = account_master.account_number<br /> where account_name.joint_account_or_not = "yes"<br /> sort by account_master.country_code;</p>
 
-[comment]: <> (Image-16 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/16.jpg" alt="" width="540" height="270" /></p>
+</ul>
 
 <p>Testing: I have performed the same calculations on the .csv files using the Microsoft Excel.</p>
 <p>Validation: Performed the same calculations by loading the .csv files into Hive and obtained the same values (documented those values, codes and screenshots of them).</p>
