@@ -161,3 +161,96 @@
 <p><strong>Account status code&nbsp; &nbsp; &nbsp; - Allowable values 1/8/5&nbsp;</strong></p>
 <p>Code to get account status code of 1:</p>
 <p>select account_number<br /> from account_master<br /> where account_status_code = "1";</p>
+
+[comment]: <> (Image-12 here)
+
+<p>So, there are 459 rows (accounts) with account status code of &ldquo;1&rdquo;.</p>
+<ul>
+<li>Code to get account status code of 5:</li>
+</ul>
+<p>select account_number<br /> from account_master<br /> where account_status_code = "5";</p>
+
+
+[comment]: <> (Image-13 here)
+
+<p>So, there are 196 rows (accounts) with account status code of &ldquo;5&rdquo;.</p>
+<ul>
+<li>Code to get account status code of 8:</li>
+</ul>
+
+[comment]: <> (Image-14 here)
+
+<p>select account_number<br /> from account_master<br /> where account_status_code = "8";</p>
+<ul>
+<li>Code for the sum of ledger balance with respect to account status codes of 1,5,8.</li>
+</ul>
+<p>select account_status_code, sum(ledger_balance)&nbsp;<br /> from account_master<br /> group by account_status_code;</p>
+
+[comment]: <> (Image-15 here)
+
+<p>On running the above code</p>
+<p>Got the values as shown in the screenshot.</p>
+<table>
+<tbody>
+<tr>
+<td width="208">
+<p><strong>S.No.</strong></p>
+</td>
+<td width="208">
+<p><strong>Account_status_code</strong></p>
+</td>
+<td width="208">
+<p><strong>Ledger_balance(sum)</strong></p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>1</p>
+</td>
+<td width="208">
+<p>1</p>
+</td>
+<td width="208">
+<p>233724530</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>2</p>
+</td>
+<td width="208">
+<p>5</p>
+</td>
+<td width="208">
+<p>100542817</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>3</p>
+</td>
+<td width="208">
+<p>8</p>
+</td>
+<td width="208">
+<p>163677718</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>How many joint account holders are there, and which are the countries they belong? i.e., prepare a country level report for joint account holders?</li>
+</ol>
+<p>There are 496 joint account holders out of total 1000 accounts.</p>
+<p>Code used:</p>
+<p>create table joint_account_table AS<br /> <br /> select account_name.account_number, account_master.country_code from account_master join account_name on account_name.account_number = account_master.account_number<br /> where account_name.joint_account_or_not = "yes"<br /> sort by account_master.country_code;</p>
+
+[comment]: <> (Image-16 here)
+
+<p>Testing: I have performed the same calculations on the .csv files using the Microsoft Excel.</p>
+<p>Validation: Performed the same calculations by loading the .csv files into Hive and obtained the same values (documented those values, codes and screenshots of them).</p>
+<p><strong>References:</strong></p>
+<ul>
+<li>I have attached the .csv files used for this assignment.</li>
+<li>Also attached the screenshots of the values obtained.</li>
+</ul>
