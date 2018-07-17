@@ -80,7 +80,8 @@
 <p>select distinct(country_code)</p>
 <p>from account_master;</p>
 
-[comment]: <> (Image-2 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/2.jpg" alt="" width="456" height="300" /></p>
 
 <p>It took me 41.086 seconds to execute the code, and fetched 3 rows &ldquo;USA&rdquo;, &ldquo;IND&rdquo;, &ldquo;CAN&rdquo;. It means there are account holders from the 3 countries United States of America, India and Canada.</p>
 <ul>
