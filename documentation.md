@@ -5,6 +5,7 @@
 
 <ul>
 <p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/1.jpg" alt="" width="776" height="489" /></p>
+</ul>
 
 <p>RAM used: 4096 MB.</p>
 
@@ -82,6 +83,7 @@
 
 <ul>
 <p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/2.jpg" alt="" width="830" height="180" /></p>
+</ul>
 
 <p>It took me 41.086 seconds to execute the code, and fetched 3 rows &ldquo;USA&rdquo;, &ldquo;IND&rdquo;, &ldquo;CAN&rdquo;. It means there are account holders from the 3 countries United States of America, India and Canada.</p>
 <ul>
@@ -91,7 +93,8 @@
 <p>where country_code = &ldquo;USA&rdquo;;</p>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/3.jpg" alt="" width="830" height="240" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/3.jpg" alt="" width="776" height="220" /></p>
+</ul>
 
 <p>It took 1.63 seconds to execute the above code and fetched 329 rows. It means there are 329 account holders in the country USA.</p>
 <ul>
@@ -100,7 +103,10 @@
 <p>select * from account_name</p>
 <p>where joint_account_or_not = &ldquo;yes&rdquo;;</p>
 
-[comment]: <> (Image-4 here)
+
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/4.jpg" alt="" width="776" height="350" /></p>
+</ul>
 
 <p>After executing the above code, it fetched 496 rows of data. It means there are 496 account holders with the joint account.</p>
 <ul>
@@ -109,7 +115,9 @@
 <p>select * from account_name</p>
 <p>where date_of_birth &gt; 1974 and date_of_birth &lt;1980;</p>
 
-[comment]: <> (Image-5 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/5.jpg" alt="" width="776" height="350" /></p>
+</ul>
 
 <p>After executing the above code, it fetched 230 rows of data. It means there are 230 account holders in between age of 39-43years.</p>
 <ul>
