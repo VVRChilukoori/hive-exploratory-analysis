@@ -143,7 +143,7 @@
 <p>from transaction_details;</p>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/8.jpg" alt="" width="776" height="270" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/8.jpg" alt="" width="570" height="240" /></p>
 </ul>
 
 <p>On running the above code, it can be seen that there are 4 different transaction currencies (&ldquo;CAD&rdquo;, &ldquo;USD&rdquo;, &ldquo;HKD&rdquo;, &ldquo;INR&rdquo;) in the transaction table. It means there are some foreign transactions.</p>
@@ -152,7 +152,7 @@
 </ul>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/9.jpg" alt="" width="830" height="400" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/9.jpg" alt="" width="540" height="270" /></p>
 </ul>
 
 <p>select * transaction_details</p>
@@ -168,10 +168,12 @@
 <p>--------------- join and creating tables -----------<br /> <br /> create table join_table AS<br /> select account_master.account_number, account_master.country_code,account_master.account_currency,transaction_details.transaction_currency from account_master join transaction_details on account_master.account_number =transaction_details.account_number;<br /> <br /> --------------- foreign currency ---------------<br /> <br /> select account_number,account_currency, transaction_currency from join_table<br /> where account_currency!= transaction_currency;</p>
 
 <ul>
-<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/10.jpg" alt="" width="830" height="400" /></p>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/10.jpg" alt="" width="540" height="270" /></p>
 </ul>
 
-[comment]: <> (Image-11 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/11.jpg" alt="" width="540" height="270" /></p>
+</ul>
 
 <p>For this one, I have joined the 2 tables with the account_number, country_code, account_currency and transaction_currency using account number as the common join. Later on, wrote a query to get the foreign transactions. And found that 2248 transactions out of total 3000 transactions were foreign transactions.</p>
 <ol start="2">
@@ -181,7 +183,9 @@
 <p>Code to get account status code of 1:</p>
 <p>select account_number<br /> from account_master<br /> where account_status_code = "1";</p>
 
-[comment]: <> (Image-12 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/12.jpg" alt="" width="540" height="270" /></p>
+</ul>
 
 <p>So, there are 459 rows (accounts) with account status code of &ldquo;1&rdquo;.</p>
 <ul>
@@ -190,7 +194,9 @@
 <p>select account_number<br /> from account_master<br /> where account_status_code = "5";</p>
 
 
-[comment]: <> (Image-13 here)
+<ul>
+<p align="left"><img src="https://github.com/VVRChilukoori/hive-exploratory-analysis/blob/branch/img/13.jpg" alt="" width="540" height="270" /></p>
+</ul>
 
 <p>So, there are 196 rows (accounts) with account status code of &ldquo;5&rdquo;.</p>
 <ul>
